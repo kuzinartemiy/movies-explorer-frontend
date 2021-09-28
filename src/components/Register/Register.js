@@ -3,6 +3,11 @@ import '../Form/Form.css';
 import { Link } from 'react-router-dom';
 
 function Register () {
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+  }
+
   return(
     <div className="register">
       
@@ -22,7 +27,7 @@ function Register () {
         <input type="password" className="form__input"></input>
         <p className="form__error">-</p>
 
-        <button type="submit" className="form__button">Зарегистрироваться</button>
+        <button onClick={handleRegister} type="submit" className="form__button">Зарегистрироваться</button>
         <p className="form__signature">Уже зарегистрированы?<Link to="/signin" className="form__link">Войти</Link></p>
       </form>
     </div>

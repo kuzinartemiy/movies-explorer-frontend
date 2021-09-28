@@ -7,10 +7,7 @@ import './Movies.css';
 function Movies () {
   return (
     <div className="movies">
-      <div className="movies__search">
-        <h1 className="movies__title">Фильм</h1>
-        <SearchForm />
-      </div>
+      <SearchForm />
       <FilterCheckbox />
       {/* <Preloader /> */}
       <MoviesCardList />

@@ -3,8 +3,8 @@ import './SearchForm.css';
 function SearchForm () {
   return (
     <div className="searchForm">
+      <input required placeholder="Фильм" className="searchForm__input"/>
       <button className="searchForm__button"></button>
-      <input className="searchForm__input"/>
     </div>
   )
 }

@@ -3,6 +3,11 @@ import '../Form/Form.css';
 import { Link } from 'react-router-dom';
 
 function Login () {
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+  }
+
   return(
     <div className="login">
       <form className="form">
@@ -17,7 +22,7 @@ function Login () {
         <input type="password" className="form__input"></input>
         <p className="form__error">-</p>
 
-        <button type="submit" className="form__button">Войти</button>
+        <button onClick={handleLogin} type="submit" className="form__button">Войти</button>
         <p className="form__signature">Ещё не зарегистрированы?<Link to="/signup" className="form__link">Регистрация</Link></p>
       </form>
     </div>
