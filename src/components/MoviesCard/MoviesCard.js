@@ -3,9 +3,9 @@ import './MoviesCard.css';
 
 function MoviesCard () {
   const [isLiked, setLike] = useState(false);
-
+  const isSaved = window.location.pathname === '/saved-movies';
   const stateLikeClass = `moviesCard__like ${isLiked ? 'moviesCard__like_liked' : '' }`
-
+  const stateSavedLikeClass = `${isSaved ? 'moviesCard__like_liked moviesCard__like_saved' : ''}`
   const handleLikeCard = () => {
     setLike(!isLiked);
   }
@@ -18,7 +18,7 @@ function MoviesCard () {
           <h2 className="moviesCard__title">33 слова о дизайне</h2>
           <p className="moviesCard__duration">1ч 47м</p>
         </div>
-        <button onClick={handleLikeCard} className={stateLikeClass}></button>
+        <button onClick={handleLikeCard} className={stateLikeClass + stateSavedLikeClass}></button>
       </div>
     </li>
   )

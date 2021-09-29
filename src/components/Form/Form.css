@@ -51,6 +51,10 @@
   background-color: #f9f9f9;
 }
 
+.form__input:focus {
+  box-shadow: 0 0 0 1pt grey;
+}
+
 .form__button {
   width: 100%;
   min-height: 45px;

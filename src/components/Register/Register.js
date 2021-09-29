@@ -10,7 +10,6 @@ function Register () {
 
   return(
     <div className="register">
-      
       <form className="form">
         <div className="form__logo"></div>
         <h2 className="form__title">Добро пожаловать!</h2>

@@ -52,7 +52,7 @@
   background-image: url('../../images/like.svg');
   background-color: transparent;
 
-  transition: .3s;
+  /* transition: .3s; */
 }
 
 .moviesCard__like:hover {
@@ -61,4 +61,9 @@
 
 .moviesCard__like_liked {
   background-image: url('../../images/liked.svg');
+}
+
+.moviesCard__like_saved:hover {
+  background-image: url('../../images/close.svg');
+  background-size: contain;
 }
