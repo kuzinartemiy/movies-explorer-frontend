@@ -1,0 +1,150 @@
+.aboutProject {
+  padding: 110px 70px;
+}
+
+.aboutProject__facts {
+  margin: 70px 0px 0px;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  list-style: none;
+}
+
+.aboutProject__fact {
+  width: 100%;
+  max-width: 550px;
+
+  margin-right: 40px;
+}
+
+.aboutProject__fact:last-of-type {
+  margin-right: 0;
+}
+
+.aboutProject__fact-title {
+  margin: 0;
+
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: -0.04em;
+}
+
+.aboutProject__fact-description {
+  margin: 26px 0px 0px;
+
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.aboutProject__timing {
+  margin-top: 110px;
+
+  display: grid;
+  grid-template-columns: 20% 80%;
+
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.aboutProject__backend-block {
+  max-height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #2be080;
+}
+
+.aboutProject__frontend-block {
+  max-height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f2f2f2;
+}
+
+.aboutProject__caption {
+  margin: 14px 0px 0px;
+
+  text-align: center;
+
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+
+  color: #a0a0a0;
+}
+
+@media screen and (max-width: 1024px) {
+  .aboutProject {
+    padding: 90px 50px;
+  }
+
+  .aboutProject__fact {
+    margin-right: 30px;
+  }
+
+  .aboutProject__fact-description {
+    margin-top: 12px;
+
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .aboutProject {
+    padding: 70px 18px;
+  }
+
+  .aboutProject__facts {
+    margin: 60px 0px 0px;
+    
+    flex-direction: column;
+  }
+
+  .aboutProject__fact {
+    margin: 56px 0px 0px;
+  }
+
+  .aboutProject__fact:first-of-type {
+    margin: 0;
+  }
+
+  .aboutProject__fact-title {
+    font-size: 18px;
+  }
+
+  .aboutProject__fact-description {
+    font-size: 11px;
+  }
+
+  .aboutProject__timing {
+    margin-top: 60px;
+
+    grid-template-columns: 100px 1fr;
+  }
+
+  .aboutProject__backend-block {
+    font-size: 11px;
+  }
+
+  .aboutProject__frontend-block {
+    font-size: 11px;
+  }
+
+  .aboutProject__caption {
+    margin: 10px 0px 0px;
+    
+    font-size: 11px;
+  }
+}

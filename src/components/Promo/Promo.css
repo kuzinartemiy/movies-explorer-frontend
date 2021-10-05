@@ -1,0 +1,134 @@
+.promo {
+  min-height: 574px;
+
+  padding: 75px 70px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #073042;
+}
+
+.promo__title {
+  max-width: 640px;
+
+  margin: 0;
+
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 1.2;
+
+  color: #ffffff;
+}
+
+.promo__logo {
+  width: 100%;
+  max-width: 310px;
+  height: 304px;
+
+  background-image: url('../../images/promo_logo.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.promo__caption {
+  max-width: 310px;
+
+  margin: 36px 0px 0px;
+
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+
+  opacity: .5;
+
+  color: #ffffff;
+}
+
+.promo__button {
+  margin-top: 146px;
+  padding: 10px 20px;
+
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  background: transparent;
+  color: #ffffff;
+}
+
+.promo__button:hover {
+  opacity: .8;
+
+  color: #000000;
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 1024px) {
+  .promo {
+    padding: 140px 44px 75px;
+
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .promo__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promo__title {
+    margin-top: 48px;
+    font-size: 40px;
+
+    text-align: center;
+  }
+
+  .promo__caption {
+    max-width: 260px;
+
+    margin: 22px 0px 0px;
+
+    text-align: center;
+  }
+
+  .promo__button {
+    margin-top: 92px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .promo {
+    padding: 70px 10px 30px;
+  }
+
+  .promo__logo {
+    max-width: 210px;
+    height: 206px;
+  }
+
+  .promo__title {
+    margin-top: 44px;
+    
+    font-size: 30px;
+  }
+
+  .promo__caption {
+    margin: 24px 0px 0px;
+  }
+
+  .promo__button {
+    margin-top: 80px;
+  }
+}

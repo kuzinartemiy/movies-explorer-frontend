@@ -1,0 +1,14 @@
+.register {
+  width: 100%;
+  max-width: 396px;
+  height: 100vh;
+
+  margin: 0 auto;
+  padding: 56px 30px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
