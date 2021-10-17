@@ -2,4 +2,4 @@
 
 Homepage:
 
-### `https://kuzinartemiy.github.io/movies-explorer-frontend`
+### `https://kuzindiploma.nomoredomains.club/`
