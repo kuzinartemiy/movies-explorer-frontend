@@ -5,6 +5,19 @@
   flex-direction: column;
 }
 
+.movies__caption {
+  margin: 0;
+
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  align-self: center;
+}
+
+.movies__caption_hidden {
+  display: none;
+}
+
 .movies__more-btn {
   width: 100%;
   max-width: 320px;
@@ -25,6 +38,10 @@
   cursor: pointer;
 
   transition: .3s;
+}
+
+.movies__more-btn_hidden {
+  display: none;
 }
 
 .movies__more-btn:hover {

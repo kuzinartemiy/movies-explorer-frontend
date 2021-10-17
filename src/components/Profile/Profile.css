@@ -8,12 +8,31 @@
   align-items: center;
 }
 
+.profile__form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .profile__title {
   margin: 0;
 
   font-family: 'Inter', 'Arial', sans-serif;
   font-weight: 500;
   font-size: 24px;
+}
+
+.profile__error {
+  height: 10px;
+  margin: 0;
+
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+
+  color: red;
 }
 
 .profile__info {
@@ -49,8 +68,25 @@
   font-weight: 500;
 }
 
-.profile__value {
+.profile__value-input {
   margin: 0;
+  padding: 2px;
+  border: none;
+
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  text-align: end;
+}
+
+.profile__value-input:focus {
+  outline: none;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1pt grey;
+}
+
+.profile__value-input::placeholder {
+  color: #000000;
 }
 
 .profile__links {
@@ -71,6 +107,25 @@
   cursor: pointer;
 
   transition: .3s;
+}
+
+.profile__signup-button {
+  margin-bottom: 5px;
+
+  border: none;
+  background-color: transparent;
+
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.profile__signup-button:hover {
+  opacity: .8;
 }
 
 .profile__links-item:first-of-type {
