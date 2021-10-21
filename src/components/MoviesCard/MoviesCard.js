@@ -1,24 +1,44 @@
-import { useState } from 'react';
 import './MoviesCard.css';
 
-function MoviesCard () {
-  const [isLiked, setLike] = useState(false);
-  const isSaved = window.location.pathname === '/saved-movies';
-  const stateLikeClass = `moviesCard__like ${isLiked ? 'moviesCard__like_liked' : '' }`
-  const stateSavedLikeClass = `${isSaved ? 'moviesCard__like_liked moviesCard__like_saved' : ''}`
+const BASE_URL = 'https://api.nomoreparties.co';
+
+function MoviesCard ({ movieData, toggleLike, checkSaved }) {
+  const isSaved = checkSaved(movieData);
+  
+  const { nameRU, duration } = movieData;
+
+  const isOnSavedMovies = window.location.pathname === '/saved-movies';
+
+  const stateLikeClass = `moviesCard__like ${isSaved ? 'moviesCard__like_liked' : '' }`;
+
+  const stateTrailerLink = `${isOnSavedMovies ? movieData.trailer : movieData.trailerLink}`;
+  const stateImageUrl = `${isOnSavedMovies ? movieData.image : BASE_URL + movieData.image.url}`;
+
   const handleLikeCard = () => {
-    setLike(!isLiked);
+    toggleLike(movieData, isSaved);
+  }
+
+  const durationTime = () => {
+    if (duration % 60 === 0) {
+      return `${duration / 60}ч`;
+    }
+    if (duration < 60) {
+      return `${duration % 60}м`;
+    }
+    return `${Math.floor(duration / 60)}ч ${duration % 60}м`;
   }
 
   return (
     <li className="moviesCard">
-      <img alt="Изображение карточки" src="https://images.unsplash.com/photo-1632227817516-71b969768e57?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=824&q=80" className="moviesCard__image"></img>
+      <a className="moviesCard__link" href={stateTrailerLink} target="_blank" rel="noreferrer">
+        <img alt="Изображение карточки" src={stateImageUrl} className="moviesCard__image"/>
+      </a>
       <div className="moviesCard__info">
         <div className="moviesCard__text">
-          <h2 className="moviesCard__title">33 слова о дизайне</h2>
-          <p className="moviesCard__duration">1ч 47м</p>
+          <h2 className="moviesCard__title">{nameRU}</h2>
+          <p className="moviesCard__duration">{durationTime()}</p>
         </div>
-        <button onClick={handleLikeCard} className={stateLikeClass + stateSavedLikeClass}></button>
+        <button onClick={handleLikeCard} className={stateLikeClass}/>
       </div>
     </li>
   )
